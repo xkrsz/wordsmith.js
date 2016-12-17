@@ -1,6 +1,6 @@
 'use strict'
 
-class Writer {
+export default class Writer {
   constructor (data) {
     this.tag = data.tag ? data.tag : 'body'
     this.typingSpeed = data.typingSpeed ? data.typingSpeed : 1
@@ -72,3 +72,5 @@ class Writer {
     }
   }
 }
+
+window.Writer = Writer
