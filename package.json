@@ -1,5 +1,5 @@
 {
-  "name": "writer",
+  "name": "writerjs",
   "version": "0.1.0",
   "description": "JS plugin for writing things.",
   "main": "gulpfile.babel.js",
