@@ -1,5 +1,5 @@
 /*
-writer 0.1.0
+wordsmith.js 0.1.0
 Copyright 2016 Krzysztof Kraszewski
 Free to use under MIT licence.
 */
@@ -13,16 +13,16 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Writer = function () {
-  function Writer(data) {
-    _classCallCheck(this, Writer);
+var Wordsmith = function () {
+  function Wordsmith(data) {
+    _classCallCheck(this, Wordsmith);
 
     this.tag = data.tag ? data.tag : 'body';
     this.typingSpeed = data.typingSpeed ? data.typingSpeed : 1;
     this.elementCounter = -1;
   }
 
-  _createClass(Writer, [{
+  _createClass(Wordsmith, [{
     key: 'typingDelay',
     value: function typingDelay() {
       return (Math.floor(Math.random() * 111) + 10) / this.typingSpeed;
@@ -89,10 +89,10 @@ var Writer = function () {
     }
   }]);
 
-  return Writer;
+  return Wordsmith;
 }();
 
-exports.default = Writer;
+exports.default = Wordsmith;
 
 
-window.Writer = Writer;
+window.Wordsmith = Wordsmith;
