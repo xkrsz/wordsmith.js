@@ -5,3 +5,25 @@ body {
     color: white;
     font-family: 'Source Code Pro', sans-serif;
 }
+
+.wordsmith:after {
+    content: '|';
+    font-size: inherit;
+    background-color: #fff;
+    animation: .5s linear infinite alternate blink
+}
+
+@keyframes blink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+}

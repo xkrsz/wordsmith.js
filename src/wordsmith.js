@@ -5,6 +5,8 @@ class Wordsmith {
     this.tag = data.tag ? data.tag : 'body'
     this.typingSpeed = data.typingSpeed ? data.typingSpeed : 1
     this.elementCounter = -1
+
+    this.tag.classList.add('wordsmith')
   }
 
   typingDelay () {

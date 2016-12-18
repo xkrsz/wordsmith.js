@@ -14,3 +14,22 @@ This is a text that will be written smoothly inside a specified element.
 This will be written one second later.
 `)
 ```
+
+### To enable animated cursor add this css
+```css
+.wordsmith:after {
+    content: '|';
+    background-color: #fff;
+    animation: .5s linear infinite alternate blink
+}
+
+@keyframes blink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+```
