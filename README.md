@@ -1,13 +1,13 @@
-# Writer
+# wordsmith.js
 > JS plugin for writing things. Written in vanilla JavaScript.
 
 ## Usage
 ```js
-const writer = new Writer({
+const ws = new Wordsmith({
     tag: document.getElementById('text'),
     typingSpeed: 1.5
 })
-writer.type(`
+ws.type(`
 This is a text that will be written smoothly inside a specified element.
 <pausefor1000>
 <br>

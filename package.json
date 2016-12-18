@@ -1,5 +1,5 @@
 {
-  "name": "writerjs",
+  "name": "wordsmith.js",
   "version": "0.1.0",
   "description": "JS plugin for writing things.",
   "main": "gulpfile.babel.js",
@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krszwsk/writer.git"
+    "url": "git+https://github.com/krszwsk/wordsmith.git"
   },
   "author": "Krzysztof Kraszewski <krszwsk@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krszwsk/writer/issues"
+    "url": "https://github.com/krszwsk/wordsmith/issues"
   },
-  "homepage": "https://github.com/krszwsk/writer#readme",
+  "homepage": "https://github.com/krszwsk/wordsmith#readme",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-preset-latest": "^6.16.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.8",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7"
   }
