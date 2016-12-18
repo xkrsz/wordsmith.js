@@ -1,6 +1,6 @@
 'use strict'
 
-export default class Wordsmith {
+class Wordsmith {
   constructor (data) {
     this.tag = data.tag ? data.tag : 'body'
     this.typingSpeed = data.typingSpeed ? data.typingSpeed : 1
