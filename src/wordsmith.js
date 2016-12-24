@@ -57,7 +57,11 @@ class Wordsmith {
           })
         } else if (tag.indexOf('<pausefor') > -1) {
           that.elementCounter--
-          return setTimeout(typeSentence.bind(null, s, cb), Number(tag.slice(9, -1)))
+          if (tag[9] === '!') {
+            return setTimeout(typeSentence.bind(null, s, cb), Number(tag.slice(9, -1)))
+          } else {
+            return setTimeout(typeSentence.bind(null, s, cb), Number(tag.slice(10, -1) / that.typingSpeed))
+          }
         } else {
           t.innerHTML += tag
           return typeSentence(s, cb)
