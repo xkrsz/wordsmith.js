@@ -1,5 +1,5 @@
 /*
-wordsmith.js 0.1.1
+wordsmith.js 0.1.2
 Copyright 2016 Krzysztof Kraszewski
 Free to use under MIT licence.
 */
