@@ -16,6 +16,8 @@ var Wordsmith = function () {
     this.tag = data.tag ? data.tag : 'body';
     this.typingSpeed = data.typingSpeed ? data.typingSpeed : 1;
     this.elementCounter = -1;
+    this.isTyping = false;
+    this.endAfterTyping = false;
 
     this.tag.classList.add('wordsmith');
   }
@@ -33,12 +35,16 @@ var Wordsmith = function () {
 
       sentence = sentence.replace(/\r?\n|\r/g, '');
 
-      typeSentence(sentence.split(''), function (isDone) {
-        if (isDone) {}
-      });
+      typeSentence(sentence.split(''), function (isDone) {});
 
       function typeSentence(s, cb) {
-        if (!s.length) return cb(true);
+        that.isTyping = true;
+
+        if (!s.length) {
+          that.isTyping = false;
+          if (that.endAfterTyping) that.end();
+          return cb(true);
+        }
 
         var c = s.shift();
 
@@ -83,10 +89,19 @@ var Wordsmith = function () {
         function typeInTag(tag, sInTag, cb) {
           if (!sInTag.length) return cb();
 
-          var c = sInTag.shift();
-          tag.innerHTML += c;
+          tag.innerHTML += sInTag.shift();
           return setTimeout(typeInTag.bind(null, tag, sInTag, cb), that.typingDelay());
         }
+      }
+    }
+  }, {
+    key: 'end',
+    value: function end() {
+      var that = this;
+      if (that.endAfterTyping || !that.isTyping) {
+        that.tag.classList.remove('wordsmith');
+      } else if (that.isTyping) {
+        that.endAfterTyping = true;
       }
     }
   }]);
